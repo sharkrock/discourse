@@ -69,7 +69,8 @@ export default Controller.extend(
       return false;
     },
 
-    usernameRequired: not("authOptions.omit_username"),
+    usernameDisabled: not("authOptions.can_edit_username"),
+    nameDisabled: not("authOptions.can_edit_name"),
 
     @discourseComputed
     fullnameRequired() {
